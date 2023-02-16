@@ -1,3 +1,6 @@
+# go over to our gmail account and setup 2 factor authentification
+# generate app password
+
 from email.message import EmailMessage
 from password import password
 import ssl
@@ -21,6 +24,7 @@ em.set_content(body)
 
 context = ssl.create_default_context()
 
+# create a function to send the mail
 with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
     smtp.login(email_sender, email_password)
     smtp.sendmail(email_sender, email_receiver, em.as_string())
