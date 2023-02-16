@@ -1,9 +1,14 @@
 # import random
 import random
 from time import sleep
+
 import pygame
+
+# Game Soundtrack
 pygame.init()
 sound = pygame.mixer.Sound('DiceSimulator/happy.mp3')
+
+# Slower text
 
 
 def slowet(text) -> str:
@@ -11,7 +16,6 @@ def slowet(text) -> str:
         print(letter, end='', flush=True)
         sleep(0.11)
     return ""
-# define a function to orll the dice
 
 
 sound.play()
@@ -37,6 +41,7 @@ print(
 
 
 def roll_dice():
+    # create a dictionary that will have the drawings to the dice
     dice_drawing = {
         1: (
             "---------",
@@ -94,5 +99,3 @@ def roll_dice():
 
 
 roll_dice()
-# create a dictionary that will have the drawings to the dice
-# create a dictionary that will have the values of the dice
